@@ -2,8 +2,8 @@ const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
 
 
-describe('Teste de login e logout', () => {
-  it('Validar login e logout', () => {
+describe('Teste Tela de Usuário - Adicionar', () => {
+  it('Validar tela de usuário - menu Adicionar', () => {
     cy.visit(baseurl.baseUrl);
     cy.contains('E-mail').type(login.username);
     cy.get('#password').type(login.senha);
