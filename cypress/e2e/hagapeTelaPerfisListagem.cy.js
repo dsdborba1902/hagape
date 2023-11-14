@@ -31,7 +31,6 @@ describe('Teste Tela de Perfis - Listagem', () => {
 
 
     //logout
-    //cy.get('.nav-header > .MuiButtonBase-root').click(); 
     cy.get('.MuiAvatar-img').click();
     cy.get('.css-ipchd0').click();
     cy.get('.MuiTypography-h6').should('be.visible');  
