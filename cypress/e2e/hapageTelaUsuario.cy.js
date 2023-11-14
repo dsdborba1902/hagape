@@ -14,25 +14,12 @@ describe('Teste de login e logout', () => {
     cy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
     cy.contains('Listagem').should('be.visible');
     cy.contains('Adicionar').should('be.visible');
-
-    //tela listagem
-
-
-    //tela adicionar
-
-
-
-
-
-
-
-
-
+    
   //logout
-  //cy.get('.nav-header > .MuiButtonBase-root').click(); 
-  //cy.get('.MuiAvatar-img').click();
-  //cy.get('.css-ipchd0').click();
-  //cy.get('.MuiTypography-h6').should('be.visible');  
+    cy.get('.nav-header > .MuiButtonBase-root').click(); 
+    cy.get('.MuiAvatar-img').click();
+    cy.get('.css-ipchd0').click();
+    cy.get('.MuiTypography-h6').should('be.visible');  
 
   })
   
