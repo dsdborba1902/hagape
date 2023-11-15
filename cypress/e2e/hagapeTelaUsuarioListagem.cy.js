@@ -1,6 +1,6 @@
 const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
-
+import 'cypress-mochawesome-reporter/register'
 
 describe('Teste Tela de Usuário - Listagem', () => {
   it('Validar tela de usuário - menu Listagem', () => {
@@ -15,6 +15,7 @@ describe('Teste Tela de Usuário - Listagem', () => {
     cy.contains('Listagem').should('be.visible');
     cy.get(':nth-child(3) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(1) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
 
+    
     //Validar título da página
     cy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');
 

@@ -1,6 +1,6 @@
 const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
-
+import 'cypress-mochawesome-reporter/register'
 
 describe('Teste Tela de Usuário - Adicionar', () => {
   it('Validar tela de usuário - menu Adicionar', () => {

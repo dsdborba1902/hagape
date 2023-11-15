@@ -1,6 +1,6 @@
 const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
-
+import 'cypress-mochawesome-reporter/register'
 
 describe('Teste Menu Perfis', () => {
   it('Validar menu Perfis', () => {

@@ -1,6 +1,6 @@
 const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
-
+import 'cypress-mochawesome-reporter/register'
 
 describe('Teste de login e logout', () => {
   it('Validar login e logout', () => {
