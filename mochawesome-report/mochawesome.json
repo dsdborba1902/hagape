@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-15T20:14:22.299Z",
-    "end": "2023-11-15T20:14:35.274Z",
-    "duration": 12975,
+    "start": "2023-11-15T20:59:22.581Z",
+    "end": "2023-11-15T20:59:35.713Z",
+    "duration": 13132,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b4ca6c08-c517-4b70-b7da-d101faf5067e",
+      "uuid": "8cefd44c-7565-4c44-a529-1b425e16b032",
       "title": "",
       "fullFile": "cypress\\e2e\\hagapeTelaUsuarioListagem.cy.js",
       "file": "cypress\\e2e\\hagapeTelaUsuarioListagem.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8bcb53f4-ebdb-428b-8c60-cffdd0cc24f6",
+          "uuid": "33ccdd12-7d2b-46a9-ae57-0551880989ff",
           "title": "Teste Tela de Usuário - Listagem",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Validar tela de usuário - menu Listagem",
               "fullTitle": "Teste Tela de Usuário - Listagem Validar tela de usuário - menu Listagem",
               "timedOut": null,
-              "duration": 11451,
+              "duration": 11518,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": null,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\hagapeTelaUsuarioListagem.cy.js\"\n}",
               "code": "cy.visit(baseurl.baseUrl);\ncy.contains('E-mail').type(login.username);\ncy.get('#password').type(login.senha);\ncy.get('.MuiButton-root').click();\ncy.contains('Login realizado com sucesso!');\ncy.get('.actions-left > .MuiButtonBase-root').click();\ncy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', \"Início\");\ncy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();\ncy.contains('Listagem').should('be.visible');\ncy.get(':nth-child(3) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(1) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();\n//Validar título da página\ncy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');\n//Validar campo E-mail\ncy.get('[tabindex=\"0\"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');\n//Validar campo Nome\ncy.get('[style=\"height: 56px; width: 473.333px; min-width: 473.333px; max-width: 473.333px;\"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');\n//Validar campo Status\ncy.get('[aria-colindex=\"3\"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');\n//Validar campo Ações\ncy.get('[style=\"height: 56px; width: 100px; min-width: 100px; max-width: 100px;\"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');\n//Validar botão Adicionar Usuário\ncy.get('.css-t5y380 > .MuiBox-root > .MuiButtonBase-root').click();\n//logout\n//cy.get('.nav-header > .MuiButtonBase-root').click(); \ncy.get('.MuiAvatar-img').click();\ncy.get('.css-ipchd0').click();\ncy.get('.MuiTypography-h6').should('be.visible');",
               "err": {},
-              "uuid": "a46848d7-55cd-4961-b511-1783ae6a8ac9",
-              "parentUUID": "8bcb53f4-ebdb-428b-8c60-cffdd0cc24f6",
+              "uuid": "2fc555c7-adab-4e43-a626-b973058fe1ab",
+              "parentUUID": "33ccdd12-7d2b-46a9-ae57-0551880989ff",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a46848d7-55cd-4961-b511-1783ae6a8ac9"
+            "2fc555c7-adab-4e43-a626-b973058fe1ab"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11451,
+          "duration": 11518,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
