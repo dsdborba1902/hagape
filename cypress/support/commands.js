@@ -11,7 +11,36 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+Cypress.Commands.add('realizarLogin', (baseurl, login) => {
+    cy.visit(baseurl.baseUrl);
+    cy.contains('E-mail').type(login.username);
+    cy.get('#password').type(login.senha);
+    cy.get('.MuiButton-root').click();
+    cy.contains('Login realizado com sucesso!');
+  });
+  
+  Cypress.Commands.add('realizarLogoff', () => {
+    cy.get('.nav-header > .MuiButtonBase-root').click();
+    cy.get('.MuiAvatar-img').click();
+    cy.get('.css-ipchd0').click();
+    cy.get('.MuiTypography-h6').should('be.visible');
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

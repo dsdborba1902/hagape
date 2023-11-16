@@ -1,14 +1,11 @@
 const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
 import 'cypress-mochawesome-reporter/register'
+import '../support/commands'
 
 describe('Teste Tela de Perfis - Adicionar', () => {
   it('Validar tela de perfis - menu Adicionar', () => {
-    cy.visit(baseurl.baseUrl);
-    cy.contains('E-mail').type(login.username);
-    cy.get('#password').type(login.senha);
-    cy.get('.MuiButton-root').click();
-    cy.contains('Login realizado com sucesso!');
+    cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
     cy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
@@ -39,7 +36,9 @@ describe('Teste Tela de Perfis - Adicionar', () => {
     //logout
     cy.get('.MuiAvatar-img').click();
     cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');  
+    cy.get('.MuiTypography-h6').should('be.visible');
+    
+    
 
   })
   

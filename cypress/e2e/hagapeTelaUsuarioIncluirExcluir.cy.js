@@ -2,15 +2,13 @@ const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
 const usuario = require('../fixtures/usuario.json')
 
+import '../support/commands'
 import 'cypress-mochawesome-reporter/register'
+
 
 describe('Teste Tela de Usuário - Incluir/Excluir Usuário', () => {
   it('Validar Incluir/Excluir Usuário', () => {
-    cy.visit(baseurl.baseUrl);
-    cy.contains('E-mail').type(login.username);
-    cy.get('#password').type(login.senha);
-    cy.get('.MuiButton-root').click();
-    cy.contains('Login realizado com sucesso!');
+    cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
     cy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
@@ -40,9 +38,7 @@ describe('Teste Tela de Usuário - Incluir/Excluir Usuário', () => {
 
 
     //logout
-   // cy.get('.MuiAvatar-img').click();
-   // cy.get('.css-ipchd0').click();
-   // cy.get('.MuiTypography-h6').should('be.visible');  
+    //cy.realizarLogoff();
 
   })
   
