@@ -1,10 +1,11 @@
 const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
 const usuario = require('../fixtures/usuario.json')
+
 import 'cypress-mochawesome-reporter/register'
 
-describe('Teste Tela de Usuário - Adicionar', () => {
-  it('Validar tela de usuário - menu Adicionar', () => {
+describe('Teste Tela de Usuário - Incluir/Excluir Usuário', () => {
+  it('Validar Incluir/Excluir Usuário', () => {
     cy.visit(baseurl.baseUrl);
     cy.contains('E-mail').type(login.username);
     cy.get('#password').type(login.senha);
@@ -15,13 +16,23 @@ describe('Teste Tela de Usuário - Adicionar', () => {
     cy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
     cy.contains('Adicionar').should('be.visible');
     cy.get(':nth-child(3) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(2) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+    //Inserir nome de usuário
     cy.get('.css-jbs21z > :nth-child(1)').type(usuario.nome);
+    //Inserir e-mail
     cy.get('.css-jbs21z > :nth-child(2)').type(usuario.email);
-    cy.get(':nth-child(3) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click();
-   //cy.get(':nth-child(3) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click().select('Join Tecnologia').should('have.value', 'Join Tecnologia');
-   cy.get(':nth-child(3) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').contains('Cortel').click();
+    //Selecionar setor
+    cy.get('.css-jbs21z > :nth-child(3)').click();
+    //cy.contains('.css-jbs21z > :nth-child(3)', 'Maya').click();
+    //cy.get('#\:r3\:-option-3').click();
     
 
+
+    //Selecionar Perfil
+    //cy.get('.css-jbs21z > :nth-child(4)').click();
+    //
+
+    //Salvar
+   // cy.get('.MuiButton-contained').click();
 
 
 

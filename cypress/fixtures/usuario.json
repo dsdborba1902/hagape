@@ -1,5 +1,7 @@
 {
     "nome": "Teste QA",
-    "email": "teste@jointecnologia.com.br"
+    "email": "teste@jointecnologia.com.br",
+    "setor": "Join Tecnologia",
+    "perfil": "Administrador"
     
 }
