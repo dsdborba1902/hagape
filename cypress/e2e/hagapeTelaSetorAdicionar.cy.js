@@ -3,8 +3,8 @@ const baseurl = require('../fixtures/baseurl.json')
 import 'cypress-mochawesome-reporter/register'
 import '../support/commands'
 
-describe('Teste Tela de Perfis - Listagem', () => {
-  it('Validar tela de perfis - menu Listagem', () => {
+describe('Teste Tela de Setor - Adicionar', () => {
+  it('Validar tela de setor - menu Adicionar', () => {
     cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");

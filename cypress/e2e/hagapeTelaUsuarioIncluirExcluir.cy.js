@@ -19,9 +19,8 @@ describe('Teste Tela de Usuário - Incluir/Excluir Usuário', () => {
     //Inserir e-mail
     cy.get('.css-jbs21z > :nth-child(2)').type(usuario.email);
     //Selecionar setor
-    cy.get('.css-jbs21z > :nth-child(3)').click();
-    //cy.contains('.css-jbs21z > :nth-child(3)', 'Maya').click();
-    //cy.get('#\:r3\:-option-3').click();
+    cy.get(':nth-child(3) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click();
+    
     
 
 
@@ -38,8 +37,9 @@ describe('Teste Tela de Usuário - Incluir/Excluir Usuário', () => {
 
 
     //logout
-    //cy.realizarLogoff();
-
+    //cy.get('.MuiAvatar-img').click();
+   // cy.get('.css-ipchd0').click();
+   // cy.get('.MuiTypography-h6').should('be.visible');
   })
   
 })
