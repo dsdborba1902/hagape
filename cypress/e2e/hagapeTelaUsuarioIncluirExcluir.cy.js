@@ -2,6 +2,7 @@ const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
 const usuario = require('../fixtures/usuario.json')
 
+
 import '../support/commands'
 import 'cypress-mochawesome-reporter/register'
 
@@ -15,15 +16,13 @@ describe('Teste Tela de Usuário - Incluir/Excluir Usuário', () => {
     cy.contains('Adicionar').should('be.visible');
     cy.get(':nth-child(3) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(2) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
     //Inserir nome de usuário
+    const User = cy.gerarUsuario();
     cy.get('.css-jbs21z > :nth-child(1)').type(usuario.nome);
     //Inserir e-mail
     cy.get('.css-jbs21z > :nth-child(2)').type(usuario.email);
     //Selecionar setor
     cy.get(':nth-child(3) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click();
-    
-    
-
-
+            
     //Selecionar Perfil
     //cy.get('.css-jbs21z > :nth-child(4)').click();
     //

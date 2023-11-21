@@ -26,6 +26,17 @@ Cypress.Commands.add('realizarLogin', (baseurl, login) => {
     cy.get('.MuiTypography-h6').should('be.visible');
   });
 
+  Cypress.Commands.add('gerarUsuario', () => {
+    const nome = 'Usuario' + Math.floor(Math.random() * 1000);
+    const email = nome.toLowerCase().replace(' ', '') + '@example.com';
+  
+    return {
+      nome,
+      email
+    };
+  });
+
+
 
 
 
