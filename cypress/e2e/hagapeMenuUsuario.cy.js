@@ -8,11 +8,11 @@ describe('Teste Menu usuario', () => {
     cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
-    cy.contains('Listagem').should('be.visible');
-    cy.contains('Adicionar').should('be.visible');
+    cy.get(':nth-child(3) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+       
     //logout
-    cy.realizarLogoff();
+    cy.get('.MuiAvatar-img').click();
+    cy.contains('Sair').click();
     
   })
   

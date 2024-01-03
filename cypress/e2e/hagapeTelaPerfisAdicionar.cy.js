@@ -8,9 +8,10 @@ describe('Teste Tela de Perfis - Adicionar', () => {
     cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(3) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
-    cy.contains('Listagem').should('be.visible');
-    cy.get(':nth-child(3) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(2) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+    cy.get(':nth-child(4) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+    
+    //Validar ação do botão Adicionar Perfil
+    cy.get('.css-t5y380 > .MuiBox-root > .MuiButtonBase-root').click();
 
     //Validar Título da Página
     cy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');
@@ -18,15 +19,15 @@ describe('Teste Tela de Perfis - Adicionar', () => {
     //Validar campo Nome
     cy.contains('Nome').should('be.visible');
 
-    //Validar campo E-mail
-    cy.contains('E-mail').should('be.visible');
+    //Validar permissões
+    cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(1)').should('be.visible');
+    cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(2)').should('be.visible');
+    cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(3)').should('be.visible');
+    cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(4)').should('be.visible');
+    cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(4)').should('be.visible');
+    cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(6)').should('be.visible');
 
-    //Validar campo Setor
-    cy.contains('Setor').should('be.visible');
-
-    //Validar campo Perfil
-    cy.contains('Perfil').should('be.visible');
-
+   
     //Validar botão Salvar
     cy.get('.MuiButton-contained').should('be.visible');
 

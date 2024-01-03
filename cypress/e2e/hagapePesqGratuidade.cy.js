@@ -10,28 +10,35 @@ describe('Teste Menu Pesquisa Gratuidade', () => {
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
     cy.get(':nth-child(7) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', 'Pesquisa Gratuidade');
 
-  //Acesso a funcionalidade
+  //Validar acesso a funcionalidade
     cy.get(':nth-child(7) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();  
+  
   //Campo Validação Código Gratuidade
   cy.get('.MuiGrid-grid-xs-4 > h3').should('be.visible');
   cy.get('.MuiGrid-grid-xs-3 > .demo-space-x > .MuiButtonBase-root').should('be.visible');
   
-  //Campo Pesquisar Gratuidade
+  //Validar campos Pesquisar Gratuidade
   cy.get('h4').should('be.visible');
   cy.get('.css-9kcp2 > h3').should('be.visible');
   cy.get('.MuiGrid2-container > :nth-child(2)').should('be.visible');
-  cy.get(':nth-child(3) > .MuiFormControl-fullWidth').should('be.visible');
-  cy.get('.MuiGrid2-grid-md-7').should('be.visible');
-  cy.get('.MuiGrid2-grid-md-5').should('be.visible');
+  cy.get('.MuiGrid2-container > :nth-child(2) > .MuiFormControl-fullWidth > .MuiFormControl-root > .MuiInputBase-root').should('be.visible');
+  cy.get('.MuiGrid2-container > :nth-child(4)').should('be.visible');  
+  cy.get('.MuiGrid2-container > :nth-child(6)').should('be.visible'); 
+  cy.get('.MuiGrid2-container > :nth-child(7)').should('be.visible'); 
 
-  //Botões de ação
+  //Validar botão Verificar Gratuidade
   cy.get('.MuiGrid-grid-md-12 > .demo-space-x > .MuiButton-contained').should('be.visible');
-  cy.get('.MuiButton-outlined').should('be.visible');
+    
+  //Validar botão Limpar  
+  cy.get('.MuiButton-outlined').should('be.visible');  
 
   //Logoff
   cy.get('.MuiAvatar-img').click();  
   cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
+  cy.get('.MuiTypography-h6').should('be.visible');
+
+
+
 
       })
   

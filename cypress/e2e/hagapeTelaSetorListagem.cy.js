@@ -8,29 +8,26 @@ describe('Teste Tela de Setor - Listagem', () => {
     cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(5) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
-    cy.get(':nth-child(5) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(1) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
-    
-    //Validar título da página
+    cy.get(':nth-child(5) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+
+    //Validar Nome da tela
     cy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');
     
-    //Validar campo Nome
-    cy.get('[style="height: 56px; width: 681.6px; min-width: 681.6px; max-width: 681.6px;"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');
-
-    //Validar campo Status
-    cy.get('[style="height: 56px; width: 170.4px; min-width: 170.4px; max-width: 170.4px;"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');
-
-    //Validar campo Ações
-    cy.get('[style="height: 56px; width: 100px; min-width: 100px; max-width: 100px;"] > .MuiDataGrid-columnHeaderDraggableContainer > .MuiDataGrid-columnHeaderTitleContainer > .MuiDataGrid-columnHeaderTitleContainerContent > .MuiDataGrid-columnHeaderTitle').should('be.visible');
-
-    //Validar botão Adicionar Setor
+    //Validar Botão adicionar Setor
     cy.get('.css-t5y380 > .MuiBox-root > .MuiButtonBase-root').should('be.visible');
+    
+    //Validar listagem
+    cy.get('[data-id="1"] > [data-field="nome"] > .MuiTypography-root').should('be.visible');
+    cy.get('[data-id="1"] > [data-field="status"] > :nth-child(1) > .MuiChip-root > .MuiChip-label').should('be.visible');
 
+    //Validar botão Ações
+    cy.get('[data-id="1"] > [data-field="actions"] > .MuiButtonBase-root > .iconify').should('be.extensible');
+
+       
     //logout
     cy.get('.MuiAvatar-img').click();
-    cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
-    
+    cy.contains('Sair').click();
+   
   })
   
 })
