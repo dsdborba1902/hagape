@@ -8,15 +8,17 @@ describe('Teste Tela de Setor - Adicionar', () => {
     cy.realizarLogin(baseurl,login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(5) > .css-11coqyv > .css-164kvcj > .MuiTypography-root').click();
-    cy.get(':nth-child(5) > .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > :nth-child(2) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+    cy.get(':nth-child(5) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
     
     //Validar título da página
     cy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');
     
+    //Validar botão +Setor
+    cy.get('.css-t5y380 > .MuiBox-root > .MuiButtonBase-root').click();
+
     //Validar campo Nome
     cy.contains('Nome').should('be.visible');
-
+    
     //Validar campo Descrição
     cy.contains('Descrição').should('be.visible');
 
