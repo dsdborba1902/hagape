@@ -2,6 +2,7 @@ const login = require('../fixtures/login.json')
 const baseurl = require('../fixtures/baseurl.json')
 import 'cypress-mochawesome-reporter/register'
 import '../support/commands'
+import { faker } from "@faker-js/faker"
 
 describe('Teste Menu GTC', () => {
   it('Validar menu GTC', () => {
@@ -22,6 +23,20 @@ describe('Teste Menu GTC', () => {
   cy.get(':nth-child(2) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type('Agencia Central');
   cy.contains('Agencia Central').click();
   cy.get(':nth-child(3) > .MuiBox-root > :nth-child(2) > .MuiButtonBase-root').click();
+
+  //Validar etapa 02 Dados do falecido
+  
+
+
+
+
+
+
+
+
+
+
+  //Validar etapa 03 Itinerario
   
   
   
