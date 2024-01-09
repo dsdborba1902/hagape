@@ -4,8 +4,8 @@ import 'cypress-mochawesome-reporter/register'
 import '../support/commands'
 import { faker } from "@faker-js/faker"
 
-describe('Teste Menu GTC', () => {
-  it('Validar menu GTC', () => {
+describe('Teste Cadastro Local Emissão GTC', () => {
+  it('Validar Cadastro Local Emissão GTC', () => {
     cy.realizarLogin(baseurl, login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
     cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
