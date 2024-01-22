@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-01-22T12:49:32.073Z",
+    "end": "2024-01-22T12:49:53.873Z",
+    "duration": 21800,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "09d6f444-d5fb-4a22-8517-1cc77045a3ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\hagapeGTCListagem.cy.js",
+      "file": "cypress\\e2e\\hagapeGTCListagem.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "728828bc-7436-445f-b33c-cd2ef10929f3",
+          "title": "Teste Listagem GTC",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar Listagem GTC",
+              "fullTitle": "Teste Listagem GTC Validar Listagem GTC",
+              "timedOut": null,
+              "duration": 19782,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\hagapeGTCListagem.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\hagapeGTCListagem.cy.js\\\\Teste Listagem GTC -- Validar Listagem GTC (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.realizarLogin(baseurl, login);\ncy.get('.actions-left > .MuiButtonBase-root').click();\ncy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', \"Início\");\ncy.get(':nth-child(8) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('be.visible');\n//Validar acesso a funcionalidade\ncy.get(':nth-child(8) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();\n//Validar nome da página\ncy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');\n//Validar Filtros\ncy.get('.css-10ixgkq').should('be.visible');\n//Validar botão Nova GTC\ncy.get('.css-natppm').should('be.visible');\n//Validar campos da listagem\ncy.get('[data-id=\"123\"] > [data-field=\"numero_guia\"] > .MuiTypography-root').should('be.visible');\ncy.get('[data-id=\"123\"] > [data-field=\"deceased.nome\"] > .MuiTypography-root').should('be.visible');\ncy.get('[data-id=\"123\"] > [data-field=\"declaracao_obito\"] > .MuiTypography-root').should('be.visible');\ncy.get('[data-id=\"123\"] > [data-field=\"numero_nota_fiscal\"] > .MuiTypography-root').should('be.visible');\ncy.get('[data-id=\"123\"] > [data-field=\"destinationGuides\"] > .MuiBox-root > .MuiTypography-root').should('be.visible');\ncy.get('[data-id=\"123\"] > [data-field=\"status\"] > :nth-child(1) > .MuiChip-root > .MuiChip-label').should('be.visible');\ncy.get('[data-id=\"123\"] > [data-field=\"created_at\"] > .MuiBox-root > .MuiTypography-body2').should('be.visible');\n//Validar menu Ações\ncy.get('[data-id=\"123\"] > [data-field=\"actions\"] > .MuiButtonBase-root').should('be.extensible');\n//Logoff\ncy.get('.MuiAvatar-img').click();\ncy.get('.css-ipchd0').click();\ncy.get('.MuiTypography-h6').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/hagapeGTCListagem.cy.js:10:86)",
+                "diff": null
+              },
+              "uuid": "bf548726-6fe4-4c96-a56d-648fbbebf185",
+              "parentUUID": "728828bc-7436-445f-b33c-cd2ef10929f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bf548726-6fe4-4c96-a56d-648fbbebf185"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19782,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

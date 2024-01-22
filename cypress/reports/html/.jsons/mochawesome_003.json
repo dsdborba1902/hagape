@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-01-22T12:50:02.454Z",
+    "end": "2024-01-22T12:50:26.770Z",
+    "duration": 24316,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1299ab8c-0c0c-4da1-9bf3-94854e2dbc7d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\hagapeGTCNovaGTC.cy.js",
+      "file": "cypress\\e2e\\hagapeGTCNovaGTC.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3ba76326-f309-4b42-82f5-c0fb1a31703c",
+          "title": "Teste Nova GTC",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar Nova GTC",
+              "fullTitle": "Teste Nova GTC Validar Nova GTC",
+              "timedOut": null,
+              "duration": 19282,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\hagapeGTCNovaGTC.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\hagapeGTCNovaGTC.cy.js\\\\Teste Nova GTC -- Validar Nova GTC (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.realizarLogin(baseurl, login);\ncy.get('.actions-left > .MuiButtonBase-root').click();\ncy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', \"Início\");\ncy.get(':nth-child(8) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('be.visible');\n//Validar acesso a funcionalidade\ncy.get(':nth-child(8) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();\n//Validar ação do botão Nova GTC\ncy.get('.css-natppm').click();\n//Validar etapa 01 Transportador\ncy.get(':nth-child(1) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type('QA Transportes');\ncy.contains('QA Transportes').click();\ncy.get(':nth-child(2) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type('Agencia Central');\ncy.contains('Agencia Central').click();\ncy.get(':nth-child(3) > .MuiBox-root > :nth-child(2) > .MuiButtonBase-root').click();\n//Validar etapa 02 Dados do falecido\n//Validar etapa 03 Itinerario\n//Logoff\n//cy.get('.MuiAvatar-img').click();  \n//cy.get('.css-ipchd0').click();\n//cy.get('.MuiTypography-h6').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/hagapeGTCNovaGTC.cy.js:11:86)",
+                "diff": null
+              },
+              "uuid": "e4c44a0f-e125-40a7-93c2-03ea5954a3f0",
+              "parentUUID": "3ba76326-f309-4b42-82f5-c0fb1a31703c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e4c44a0f-e125-40a7-93c2-03ea5954a3f0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19282,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

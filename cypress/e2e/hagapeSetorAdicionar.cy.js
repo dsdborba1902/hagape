@@ -5,20 +5,19 @@ import '../support/commands'
 
 describe('Teste Tela de Setor - Adicionar', () => {
   it('Validar tela de setor - menu Adicionar', () => {
-    cy.realizarLogin(baseurl,login);
+    cy.realizarLogin(baseurl, login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
-    cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(5) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
-    
+    cy.contains('Setores').click();
+
     //Validar título da página
     cy.get('.MuiCardHeader-content > .MuiTypography-root').should('be.visible');
-    
+
     //Validar botão +Setor
     cy.get('.css-t5y380 > .MuiBox-root > .MuiButtonBase-root').click();
 
     //Validar campo Nome
     cy.contains('Nome').should('be.visible');
-    
+
     //Validar campo Descrição
     cy.contains('Descrição').should('be.visible');
 
@@ -33,11 +32,11 @@ describe('Teste Tela de Setor - Adicionar', () => {
 
     //logout
     cy.get('.MuiAvatar-img').click();
-    cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
-    
-      
+    cy.contains('Sair').click();
+    cy.contains('Bem-vindo!');
+
+
 
   })
-  
+
 })

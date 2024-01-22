@@ -22,8 +22,8 @@ Cypress.Commands.add('realizarLogin', (baseurl, login) => {
   Cypress.Commands.add('realizarLogoff', () => {
     cy.get('.nav-header > .MuiButtonBase-root').click();
     cy.get('.MuiAvatar-img').click();
-    cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
+    cy.contains('Sair').click();
+    cy.contains('Bem-vindo!');
   });
 
   Cypress.Commands.add('gerarUsuario', () => {

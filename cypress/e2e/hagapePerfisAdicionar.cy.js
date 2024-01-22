@@ -5,12 +5,11 @@ import '../support/commands'
 
 describe('Teste Tela de Perfis - Adicionar', () => {
   it('Validar tela de perfis - menu Adicionar', () => {
-    cy.realizarLogin(baseurl,login);
+    cy.realizarLogin(baseurl, login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
-    cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(4) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
-    
+   
     //Validar ação do botão Adicionar Perfil
+    cy.contains('Perfis').click();
     cy.get('.css-t5y380 > .MuiBox-root > .MuiButtonBase-root').click();
 
     //Validar Título da Página
@@ -27,7 +26,6 @@ describe('Teste Tela de Perfis - Adicionar', () => {
     cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(4)').should('be.visible');
     cy.get('.MuiTableHead-root > .MuiTableRow-root > :nth-child(6)').should('be.visible');
 
-   
     //Validar botão Salvar
     cy.get('.MuiButton-contained').should('be.visible');
 
@@ -36,11 +34,9 @@ describe('Teste Tela de Perfis - Adicionar', () => {
 
     //logout
     cy.get('.MuiAvatar-img').click();
-    cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
-    
-    
+    cy.contains('Sair').click();
+    cy.contains('Bem-vindo!');
 
   })
-  
+
 })

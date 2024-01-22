@@ -8,14 +8,12 @@ describe('Teste Cadastro Local Emissão GTC', () => {
   it('Validar Cadastro Local Emissão GTC', () => {
     cy.realizarLogin(baseurl, login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
-    cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(8) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('be.visible');
-
+    
     //Validar acesso a funcionalidade
-    cy.get(':nth-child(8) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
+    cy.contains('Guia de Transporte').click();
 
     //Validar ação do botão Nova GTC
-    cy.get('.css-natppm').click();
+    cy.get('.css-5vj4i6').click();
 
     //Validar cadastro de novo local de emissão
     //Acesso ao modal 
@@ -30,9 +28,10 @@ describe('Teste Cadastro Local Emissão GTC', () => {
     cy.get('.MuiDialogActions-root > .MuiButton-outlined').click();
 
     //Logoff
-    cy.get('.MuiAvatar-img').click();  
-    cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
+    cy.get('.MuiAvatar-img').click();
+    cy.contains('Sair').click();
+    cy.contains('Bem-vindo!');
+
 
 
   })

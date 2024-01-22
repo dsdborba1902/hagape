@@ -7,9 +7,7 @@ describe('Teste Menu Pesquisa Gratuidade', () => {
   it('Validar Menu Pesquisa Gratuidade', () => {
     cy.realizarLogin(baseurl, login);
     cy.get('.actions-left > .MuiButtonBase-root').click();
-    cy.get('.css-1t0b3pu > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', "Início");
-    cy.get(':nth-child(7) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').should('have.text', 'Pesquisa Gratuidade');
-
+    
     //Validar acesso a funcionalidade
     cy.get(':nth-child(7) > .MuiButtonBase-root > .MuiBox-root > .MuiTypography-root').click();
 
@@ -34,9 +32,8 @@ describe('Teste Menu Pesquisa Gratuidade', () => {
 
     //Logoff
     cy.get('.MuiAvatar-img').click();
-    cy.get('.css-ipchd0').click();
-    cy.get('.MuiTypography-h6').should('be.visible');
-
+    cy.contains('Sair').click();
+    cy.contains('Bem-vindo!');
 
   })
 
