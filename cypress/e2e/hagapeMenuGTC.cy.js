@@ -12,9 +12,7 @@ describe('Teste Menu GTC', () => {
     cy.contains('Guia de Transporte').click();
 
     //Logoff
-    cy.get('.MuiAvatar-img').click();
-    cy.contains('Sair').click();
-    cy.contains('Bem-vindo!');
+    cy.realizarLogout();
 
   })
 

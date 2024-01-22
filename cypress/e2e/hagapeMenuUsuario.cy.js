@@ -10,10 +10,8 @@ describe('Teste Menu usuario', () => {
     cy.contains('Usuários');
 
     //logout
-    cy.get('.nav-header > .MuiButtonBase-root').click();
-    cy.get('.MuiAvatar-img').click();
-    cy.contains('Sair').click();
-    cy.contains('Bem-vindo!');
+    cy.realizarLogout();
+    
   })
 
 })

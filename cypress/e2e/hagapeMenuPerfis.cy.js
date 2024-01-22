@@ -10,10 +10,7 @@ describe('Teste Menu Perfis', () => {
     cy.contains('Perfis');
    
     //logoff
-    cy.get('.nav-header > .MuiButtonBase-root').click();
-    cy.get('.MuiAvatar-img').click();
-    cy.contains('Sair').click();
-    cy.contains('Bem-vindo!');
+    cy.realizarLogout();
 
 
   })
