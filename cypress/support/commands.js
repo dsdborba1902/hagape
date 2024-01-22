@@ -19,7 +19,7 @@ Cypress.Commands.add('realizarLogin', (baseurl, login) => {
     cy.contains('Login realizado com sucesso!');
   });
   
-  Cypress.Commands.add('realizarLogoff', () => {
+  Cypress.Commands.add('Logoff', () => {
     cy.get('.nav-header > .MuiButtonBase-root').click();
     cy.get('.MuiAvatar-img').click();
     cy.contains('Sair').click();

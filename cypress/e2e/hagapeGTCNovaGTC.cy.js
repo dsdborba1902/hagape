@@ -17,12 +17,30 @@ describe('Teste Nova GTC', () => {
 
     //Validar etapa 01 Transportador
     cy.contains('Transportador').click();
+    cy.get(':nth-child(1) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type('CONSOLARE').click();
+    cy.contains('CONSOLARE').click();
+    cy.get(':nth-child(2) > .css-tzsjye > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type('Consolação').click();
+    cy.contains('Agência Consolação (CONSOLARE)').click();
+    cy.get(':nth-child(3) > .MuiBox-root > :nth-child(2) > .MuiButtonBase-root').click();
+   
+    //Validar etapa 02 Dados do Falecido - Não Identificado
+    cy.contains('Não identificado').should('be.visible');
     
-    //Validar etapa 02 Dados do falecido
-    cy.contains('Dados do Falecido');
+    //Validar campos para preenchimento
+    cy.get(':nth-child(3) > .MuiStepContent-root').should('be.visible');
+    
+
+
 
     //Validar etapa 03 Itinerario
     cy.contains('Itinerário');
+
+
+
+
+
+
+
 
 
 
